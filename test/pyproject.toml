@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "test"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "8.3.4"
+coverage = "7.6.9"
+pytest-asyncio = "0.25.0"
+black = "^25.1.0"
+ruff = "^0.12.9"
+mypy = "^1.17.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+
+[tool.coverage.run]
+omit = ["*/test_*.py"]
+
